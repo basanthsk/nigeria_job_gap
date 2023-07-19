@@ -1,0 +1,22 @@
+,0
+Accounting/Finance/Banking,0
+Administrative/Secretarial ,1
+Advertising/Media ,2
+Agricultural ,3
+Communication ,4
+Customer Service ,5
+Education ,6
+"Energy,Oil & Gas ",7
+Engineering/Processing/Manufacturing,8
+Healthcare ,9
+Hospitalilty/Food Service ,10
+Human Resource Management ,11
+IT ,12
+Legal ,13
+Mining ,14
+Other,15
+Purchasing/Procurement ,16
+Quality Control/Assurance ,17
+Sales / Marketing ,18
+Securtity/Law Enforcement ,19
+Supply Chain/Logistics/Warehousing ,20

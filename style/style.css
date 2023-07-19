@@ -1,0 +1,19 @@
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/*Enlarge images on hover*/
+img {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+img:hover {
+    
+    background-color: azure;
+    
+    transform: scale(1.5);
+    margin-left: auto;
+    margin-right: auto;
+        
+}
