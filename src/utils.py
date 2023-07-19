@@ -10,7 +10,7 @@ import ktrain
 import pandas as pd
 import os
 import neattext.functions as nfx
-from src.gd_download import download_file_from_google_drive
+import gdown
 
 label_path = ("./data/labels.txt")
 top_skills= ("./data/top_50_hard_skills.csv")
@@ -34,28 +34,21 @@ def default_text():
 
 @st.cache(allow_output_mutation=True,suppress_st_warning=True)
 def load_model():
-    
+    url = os.getenv("MODEL_URL")
     model_dir = Path("./models/distilbert/")
-    
     model_dir.mkdir(exist_ok=True)
     
-	# # folder exists?
-	
-    # if not os.path.exists(model_path):``
-    # # create folder
-    #     os.mkdir(model_path)
-	
-	# file exists?
-    
     f_checkpoint = Path("./models/distilbert/tf_model.h5")
+    
+    
     
     if not f_checkpoint.exists():
         with st.spinner("Downloading model... this may take awhile! \n Don't stop it!"):
             # from gd_download import download_file_from_google_drive
-            download_file_from_google_drive(cloud_model_location, f_checkpoint)
+            gdown.download(url, str(f_checkpoint), quiet=True)
  
 	# load model
-    model = ktrain.load_predictor(model_dir)
+    model = ktrain.load_predictor(str(model_dir))
     return model
 
 

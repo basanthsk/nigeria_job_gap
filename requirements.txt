@@ -15,7 +15,7 @@ st_annotated_text==2.0.0
 requests
 PyPDF2
 python-docx
-
+gdown
 # nltk
 # Unidecode
 streamlit_lottie
